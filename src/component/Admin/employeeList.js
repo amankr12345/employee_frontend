@@ -1,8 +1,5 @@
-import { Divider, ListItem, ListItemText} from '@mui/material';
-
-import DeleteIcon from '@mui/icons-material/Delete';
-import EditIcon from '@mui/icons-material/Edit';
-import { useNavigate } from 'react-router-dom';
+import { Divider, ListItem, ListItemText} from '@mui/material'
+import { useNavigate } from 'react-router-dom'
 import axios from 'axios'
 
 
@@ -37,8 +34,8 @@ const ListEmployee = ({employees:{name,email,payroll,department,password,_id}}) 
                     primary={department}
 
                 />
-                <EditIcon  onClick={()=>navigate(`/update/${_id}`)}/>
-                <DeleteIcon onClick={hadnleDelete} />
+                <button  onClick={()=>navigate(`/update/${_id}`)}>Update</button>
+                <button onClick={hadnleDelete}>Delete</button>
                 <Divider variant="inset" component="li" />
             </ListItem>
             <hr/>
