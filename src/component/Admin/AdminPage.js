@@ -18,7 +18,7 @@ const AdminPage=()=>{
 
     const handleSubmit=async()=>{
         const {name,email,password,payroll,department}=text
-        await axios.post('http://localhost:5050/app/add',{name:name,email:email,password:password,payroll:payroll,
+        await axios.post('https://employeebackend.vercel.app/app/add',{name:name,email:email,password:password,payroll:payroll,
             department:department
         })
         .then(res=>console.log(res.data))
